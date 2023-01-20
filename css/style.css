@@ -7,10 +7,25 @@
     --radius: 2px;
     --title-weight: 700;
     --light-weight: 300;
+    --primary-color: #37517e;
 }
 main {
     margin-top: 96px;
 }
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #FFF;
+    border-color: var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: #FFF;
+    color: var(--primary-color);
+    transition: background-color 0.5s;
+}
+
+
 .navbar-simply-blog {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
@@ -306,4 +321,14 @@ main {
 
 .page-title {
     font-size: 2rem;
+}
+
+/* Login Page */
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
 }

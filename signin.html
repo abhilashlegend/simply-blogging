@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply Blogging - Home</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-simply-blog fixed-top">
+        <div class="container px-5">
+          <a class="navbar-brand text-primary" href="index.html">Simply Blogging</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-lg-5">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Automobile</a></li>
+                  <li><a class="dropdown-item" href="#">Finance</a></li>
+                  <li><a class="dropdown-item" href="#">Health</a></li>
+                  <li><a class="dropdown-item" href="#">Travel</a></li>
+                  <li><a class="dropdown-item" href="#">Technology</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Sign in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign up</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="vh-100">
+            <div class="container py-5 h-100">
+              <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                  <img src="./images/draw2.svg"
+                    class="img-fluid" alt="Phone image">
+                </div>
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                  <form class="needs-validation" novalidate>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="email">Email address</label>
+                      <input type="email" name="email" id="email" class="form-control" required />
+                      <div class="invalid-feedback">
+                        Please enter valid email
+                      </div>
+                    </div>
+          
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="password">Password</label>
+                      <input type="password" id="password" class="form-control" required />
+                      <div class="invalid-feedback">
+                        Please enter password
+                      </div>
+                    </div>
+          
+                    
+          
+                    <!-- Submit button -->
+                    <button type="submit" class="btn primary-btn btn-block">Sign in</button>
+          
+                   
+          
+                    
+                   
+          
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+      </main>
+
+
+<footer class="footer">
+<div class="container">
+    <div class="copyright col-12 text-center">
+    © Copyright SimplyBlog. All Rights Reserved Designed by Abhilash N
+    </div>
+</div>
+</footer>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/app.js" defer></script>
+</body>
+</html>
