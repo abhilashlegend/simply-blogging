@@ -36,10 +36,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Sign in</a>
+                <a class="nav-link" href="signin.html">Sign in</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="signup.html">Sign up</a>
+                <a class="nav-link active" href="#">Sign up</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -60,6 +60,15 @@
                 </div>
                 <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                   <form class="needs-validation" novalidate>
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="fullname">Fullname</label>
+                        <input type="text" name="fullname" id="fullname" class="form-control" required />
+                        <div class="invalid-feedback">
+                            Please enter your fullname
+                        </div>
+                    </div>
+
+
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                       <label class="form-label" for="email">Email address</label>
@@ -72,22 +81,25 @@
                     <!-- Password input -->
                     <div class="form-outline mb-4">
                       <label class="form-label" for="password">Password</label>
-                      <input type="password" id="password" class="form-control" required />
+                      <input type="password" id="password" name="confirmpassword" class="form-control" required />
                       <div class="invalid-feedback">
                         Please enter password
                       </div>
                     </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="confirmpassword">Confirm Password</label>
+                        <input type="password" id="confirmpassword" name="confirmpassword" class="form-control" required />
+                        <div class="invalid-feedback">
+                          Please enter confirm password
+                        </div>
+                      </div>
           
                     
           
                     <!-- Submit button -->
-                    <button type="submit" class="btn primary-btn btn-block">Sign in</button>
-          
-                   
-          
-                    
-                   
-          
+                    <button type="submit" class="btn primary-btn btn-block">Sign Up</button>
+        
                   </form>
                 </div>
               </div>
