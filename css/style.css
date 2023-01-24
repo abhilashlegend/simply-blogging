@@ -332,3 +332,25 @@ flex: 1;
 height: 1px;
 background: #eee;
 }
+
+/* Blog Index Page */
+
+.automobile-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../images/automobile-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    color: #FFF;
+    position: relative;
+}
+
+.automobile-banner h1 {color: #FFF;font-size: 4rem;}
+
+@media(max-width: 412px){
+    .automobile-banner h1 {color: #FFF;font-size: 3rem;}
+}
+
+.banner-bg {
+    background-color: rgba(0,0,0,0.95)
+}
