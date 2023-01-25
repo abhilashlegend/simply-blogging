@@ -25,6 +25,10 @@ main {
     transition: background-color 0.5s;
 }
 
+.invalid-feedback { display: none; }
+
+.hide { display: none;}
+
 
 .navbar-simply-blog {
     padding-top: 1.75rem;
