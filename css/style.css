@@ -339,7 +339,7 @@ background: #eee;
 
 /* Blog Index Page */
 
-.automobile-banner {
+.automobile-banner, .finance-banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url(../images/automobile-banner.jpg);
     background-repeat: no-repeat;
@@ -350,6 +350,11 @@ background: #eee;
 }
 
 .automobile-banner h1 {color: #FFF;font-size: 4rem;}
+
+.finance-banner { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../images/finance-banner.jpg);
+}
 
 @media(max-width: 412px){
     .automobile-banner h1 {color: #FFF;font-size: 3rem;}
