@@ -34,5 +34,47 @@
     })
    
     blogContainer.innerHTML = output;
-
 }
+
+// Logout user
+const logOut = () => {
+  const clearLoginData = [
+    {
+        loggedIn: false,
+        username: "",
+        fullname: ""
+    }
+];
+window.localStorage.setItem("auth", JSON.stringify(clearLoginData));
+}
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+logoutBtn.addEventListener("click", (e) => {
+  logOut();
+  location.replace("/index.html");
+});
+
+
+// Check user authorization
+(() => {
+  const auth = JSON.parse(window.localStorage.getItem("auth"));
+  const accMenu = document.getElementById("account-menu");
+  const signinMenu = document.getElementById("signin-menu");
+  const signupMenu = document.getElementById("signup-menu");
+  auth.forEach(data => {
+    
+    if(data.loggedIn == true){
+      console.log(true);
+      
+      accMenu.style.display = "block";
+      signinMenu.style.display = "none";
+      signupMenu.style.display = "none";
+    } else {
+      accMenu.style.display = "none";
+      signinMenu.style.display = "block";
+      signupMenu.style.display = "block";
+      console.log(false);
+    }
+  })
+})();

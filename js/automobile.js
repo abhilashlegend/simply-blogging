@@ -1,7 +1,7 @@
 const automobileBlogData = [
     {
         title: "Honda, TVS, Royal Enfield increase market share in April-December 2022",
-        postImage: "./images/automobile/20230124024120_Collage_24_01_23.jpg",
+        postImage: "./images/automobile/20230124024120_Collage_24_01_23.webp",
         content: `
         <p>SIAM (Society Of Indian Automobile Manufacturers) has released numbers for the period of April-December 2022. The first nine months of the financial year saw sales of 79,39,498 motorcycles (up 17 percent), 39,85,312 scooters (up 32 percent), and 3,32,684 mopeds (down 9 percent). However, these numbers are well below those of April-December 2019 (total sales: 1.39 crore units – scooters: 44,63,954, motorcycles: 89,55,215, mopeds: 4,95,805) as well as April-December 2018 (total sales: 1.65 crore units – scooters: 53,24,125, motorcycles: 1.05 crore, mopeds: 661,923). Let’s examine how each of the major players in the market performed.</p>
         <h3>Hero MotoCorp: 39,21,309 units</h3>
@@ -15,7 +15,7 @@ const automobileBlogData = [
     },
     {
         title: "Maruti Suzuki Fronx Sigma base model: in pictures",
-        postImage: "./images/automobile/20230124015407_Fronx_side_resized.jpg",
+        postImage: "./images/automobile/20230124015407_Fronx_side_resized.webp",
         content: `
         <p>At Auto Expo 2023, Maruti Suzuki unveiled the Baleno-based Fronx SUV along with the much-awaited 5-door Jimny. The bookings for the Fronx are already underway and the SUV will go on sale in April this year. </p>
         <ol>
@@ -35,7 +35,7 @@ const automobileBlogData = [
     },
     {
         title: "Toyota Hyryder waiting period extends up to 15 months",
-        postImage: "./images/automobile/20230124010844_Hyryder 2.jpg",
+        postImage: "./images/automobile/20230124010844_Hyryder-2.webp",
         content: `<p>The Maruti Suzuki Grand Vitara and Toyota Hyryder SUVs have had a fair start in the market since their launch last year, selling a combined average of 9,000 units per month. Our dealer sources tell us that while the Hyryder's mild-hybrid variants command a maximum waiting period of up to 15 months, strong-hybrid variants see between 6-7 months.</p>
         <ul>
             <li>Longer waiting period for Hyryder's mild hybrid line-up</li>
@@ -53,7 +53,7 @@ const automobileBlogData = [
     },
     {
         title: "Honda Activa H-Smart launched at Rs 80,537",
-        postImage: "./images/automobile/20230123014428_Activa.jpg",
+        postImage: "./images/automobile/20230123014428_Activa.webp",
         content: `
         <p>Honda has launched the Activa H-Smart in India at Rs 80,537. It gets a host of keyless features but remains mechanically identical to the standard Activa. The Activa H-Smart is available in six colours. Alongside the Activa H-Smart, Honda also revealed the updated prices for the Activa 6G Standard (Rs 74,536) and the Activa 6G DLX (Rs 77,036).</p>
         <ol>

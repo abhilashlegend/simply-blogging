@@ -65,7 +65,7 @@ signinBtn.addEventListener("click", (e) => {
         let message = '';
         if(loggedIn === true){
             message = "Login Successfull";
-            //location.replace("/index.html");
+            location.replace("/index.html");
             alert(message);
         } else {
             message = "Invalid username or password";
