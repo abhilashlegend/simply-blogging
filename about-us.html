@@ -36,10 +36,21 @@
                   <li><a class="dropdown-item" href="technology.html">Technology</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
+              <li class="nav-item dropdown account-menu" id="account-menu">
+                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                  <li><a class="dropdown-item" href="automobile.html">Profile</a></li>
+                  <li><a class="dropdown-item" href="finance.html">Add Blog</a></li>
+                  <li><button class="dropdown-item" href="#" id="logoutBtn">Logout</button></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item" id="signin-menu">
                 <a class="nav-link" href="signin.html">Sign in</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="signup-menu">
                 <a class="nav-link" href="signup.html">Sign up</a>
               </li>
             </ul>
@@ -138,5 +149,6 @@
 
       <script src="./js/jquery.js"></script>
       <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/app.js" defer></script>
 </body>
 </html>

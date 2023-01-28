@@ -26,7 +26,7 @@
             <p class="card-text">
                 ${truncateContent(blog.content, 200)}
             </p>
-            <a href="#!" class="btn primary-btn">Read</a>
+            <a href="#!" class="btn primary-btn" data-bs-toggle="modal" data-bs-target="#blogDetailModal" data-title="${blog.title}" data-content="${blog.content}" data-img="${blog.postImage}">Read</a>
             </div>
         </div>
       </div>
@@ -78,3 +78,9 @@ logoutBtn.addEventListener("click", (e) => {
     }
   })
 })();
+
+document.getElementById('blogDetailModal').addEventListener('show.bs.modal', (e) => {
+  document.getElementById("modal-title").innerHTML = e.relatedTarget.dataset.title;
+  document.getElementById("modal-image").setAttribute("src", e.relatedTarget.dataset["img"]);
+  document.getElementById("modal-content").innerHTML = e.relatedTarget.dataset.content;
+});

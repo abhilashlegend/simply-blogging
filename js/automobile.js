@@ -1,5 +1,6 @@
 const automobileBlogData = [
     {
+        id: 1,
         title: "Honda, TVS, Royal Enfield increase market share in April-December 2022",
         postImage: "./images/automobile/20230124024120_Collage_24_01_23.webp",
         content: `
@@ -14,6 +15,7 @@ const automobileBlogData = [
         published: "Jan 24, 2023 02:41:00 PM"
     },
     {
+        id: 2,
         title: "Maruti Suzuki Fronx Sigma base model: in pictures",
         postImage: "./images/automobile/20230124015407_Fronx_side_resized.webp",
         content: `
@@ -34,6 +36,7 @@ const automobileBlogData = [
         published: "Jan 24, 2023 03:13:00 PM"
     },
     {
+        id: 3,
         title: "Toyota Hyryder waiting period extends up to 15 months",
         postImage: "./images/automobile/20230124010844_Hyryder-2.webp",
         content: `<p>The Maruti Suzuki Grand Vitara and Toyota Hyryder SUVs have had a fair start in the market since their launch last year, selling a combined average of 9,000 units per month. Our dealer sources tell us that while the Hyryder's mild-hybrid variants command a maximum waiting period of up to 15 months, strong-hybrid variants see between 6-7 months.</p>
@@ -52,6 +55,7 @@ const automobileBlogData = [
         published: "Jan 24, 2023 01:14:00 PM"
     },
     {
+        id: 4,
         title: "Honda Activa H-Smart launched at Rs 80,537",
         postImage: "./images/automobile/20230123014428_Activa.webp",
         content: `
@@ -69,7 +73,44 @@ const automobileBlogData = [
         `,
         userId: 1,
         published: "Jan 23, 2023 01:44:00 PM"
+    },
+    {
+        id: 5,
+        title: "Maruti Suzuki Celerio to be sold as Toyota Vitz in South Africa",
+        postImage: "./images/automobile/20230127063547_Vitz.jpg",
+        content: `
+        <p>The Toyota-Suzuki joint venture will see the addition of yet another new product for South Africa. The current-gen Maruti Suzuki Celerio that is made in India will be sold in South Africa as the Toyota Vitz. The new Toyota Vitz will go on sale in the coming months and will replace the Toyota Agya in the South African domestic market.</p>
+        <ol>
+            <li>Celerio to be sold as Toyota Vitz in South Africa</li>
+            <li>Will go on sale in the coming months</li>
+            <li>Will not get any major mechanical changes</li>
+        <ol>
+        <h3>Toyota Vitz: What’s different?</h3>
+        <p>A first image of the rebadged Celerio (new Toyota Vitz) has surfaced online; the car is visible from the front three quarters and looks almost similar to the current Celerio. The only visible difference is the usage of Toyota logo and Vitz badging instead of the usual Suzuki ones. While it is not confirmed, we don’t expect any major changes on the interior or mechanical side and the Celerio-based Toyota Vitz will most likely continue with the same 1.0-litre K10C DualJet petrol engine mated to either a five-speed manual or an AMT automatic. </p>
+        <h3>Vitz: another reincarnated Toyota moniker</h3>
+        <p>With each new Suzuki-supplied product, Toyota seems to be reincarnating older model names for the cars sold in South Africa and a few Middle Eastern markets. The trend started with Toyota introducing the previous-gen Baleno as the Toyota Starlet in South Africa and Toyota Glanza in India. The Glanza and Starlet were names of Toyota hatchbacks that were sold overseas in the 1990s and early 2000s. </p>
+
+        `,
+        userId: 1,
+        published: "Jan 28, 2023 01:44:00 PM"   
+    },
+    {
+        id: 6,
+        title: "2023 Formula Bharat winners announced",
+        postImage: "./images/automobile/20230127035630_VGN_2616.jpg",
+        content: `
+        <p>Now in its seventh edition, the Formula Bharat student competition has announced Veloce Racing and STES Stallion Motorsport Electric as the overall winners of the 2023 edition. Similar to the previous season, this year’s event also adopted a hybrid approach, with virtual events and on-track events at Coimbatore’s Kari Motor Speedway.</p>
+        <h3>Formula Bharat: what is it?</h3>
+        <p>The competition serves as a training ground for engineering students who aspire to build a future in the automotive industry. Following the rule books, the teams have to design and fabricate a formula-style prototype vehicle from scratch, along with seeking sponsorship and donations to fund the project. This not only helps them gain valuable experience in teamwork, but also in areas of management.</p>
+        <p>The competition is divided in two categories – combustion and electric. A jury of experts – hailing from motorsport, automotive and supplier industries – judge the teams and their vehicles in the areas of engineering design, overall cost, marketability and dynamic performance.</p>
+        <h3>2023 Formula Bharat winners</h3>
+        <p>This year, Formula Bharat introduced two classes. Class I gave aspiring student teams the chance to have their conceptual designs judged by industry experts, without having to build a physical prototype. The winners of this class were already announced in November 2022, with Hermes Racing (Kalinga Institute of Industrial Technology) winning in the combustion category and IITK Motorsports (Indian Institute of Technology Kanpur) winning in the electric category.</p>
+        <p>Meanwhile, Class II was conducted on-site with a total of 53 teams – 32 combustion and 21 electric. The winners of the overall event were Veloce Racing (Vishwakarma Institute of Technology) in the combustion category and STES Stallion Motorsport Electric (Kashibai Navale College of Engineering) in the electric category. The on-site event also comprised of the mandatory brake test, noise test, tilt test and more. These were followed by dynamic events, including skidpad, acceleration, autocross, efficiency and the endurance test on the track.</p>
+        `,
+        userId: 1,
+        published: "Jan 27, 2023 01:44:00 PM"   
     }
+    
 ];
 
 window.localStorage.setItem("autoblog", JSON.stringify(automobileBlogData));

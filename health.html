@@ -36,10 +36,20 @@
                   <li><a class="dropdown-item" href="technology.html">Technology</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
+              <li class="nav-item dropdown account-menu" id="account-menu">
+                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                  <li><a class="dropdown-item" href="automobile.html">Profile</a></li>
+                  <li><a class="dropdown-item" href="finance.html">Add Blog</a></li>
+                  <li><button class="dropdown-item" href="#" id="logoutBtn">Logout</button></li>
+                </ul>
+              </li>
+              <li class="nav-item" id="signin-menu">
                 <a class="nav-link" href="signin.html">Sign in</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" id="signup-menu">
                 <a class="nav-link" href="signup.html">Sign up</a>
               </li>
             </ul>
@@ -86,6 +96,28 @@
                 </div>
             </div> <!-- End of row -->
         </div> <!-- End of container -->
+
+        <div class="modal fade" id="blogDetailModal" tabindex="-1" aria-labelledby="blogDetailModal" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <figure class="d-flex justify-content-center">
+                  <img id="modal-image" src="" alt="Blog Image" class="img-fluid" />
+                </figure>
+                <div id="modal-content">
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End of modal -->
       </main>
 
       <footer class="footer">
