@@ -1,5 +1,6 @@
 const travelBlogData = [
     {
+        id: 1,
         title: "ROAD TO HANA: HIGHWAY MAP, THINGS TO DO AND TIPS",
         postImage: "./images/travel/pools-of-oheo-1536578.jpg",
         content: `
@@ -15,6 +16,7 @@ const travelBlogData = [
         published: "Jan 03, 2023 02:41:00 PM"
     },
     {
+        id: 2,
         title: "SINDHUDURG FORT - WHY DID CHHATRAPATI SHIVAJI MAHARAJ BUILT THIS FORT?",
         postImage: "./images/travel/Sindhudurg-Fort.jpg",
         content: `
@@ -27,6 +29,7 @@ const travelBlogData = [
         published: "April 22, 2022 03:13:00 PM"
     },
     {
+        id: 3,
         title: "5 Tips for planning the ultimate Vienna vacation",
         postImage: "./images/travel/Maria-Theresien-Platz_Wien_Sept_2020_1.jpg",
         content: `
@@ -46,6 +49,7 @@ const travelBlogData = [
         published: "Jan 16, 2023 01:14:00 PM"
     },
     {
+        id: 4,
         title: "How to plan a budget friendly trip to Manali",
         postImage: "./images/travel/Manali_City.jpg",
         content: `
@@ -59,6 +63,37 @@ const travelBlogData = [
        <p>When travelling on a budget to Manali, it is best to stay in hostels because hotel rates will be higher. You will get the opportunity to engage with other guests while staying at the hostel and be amazed by the cultural diversity and ethical standards. Any hostel stay would start at Rs. 250.</p>
        <p><strong>Food</p>
        <p>To make your 3 to 4-day vacation to Manali on a budget more enticing and refreshing, you must try the local cuisine. You will pay INR 400 daily for breakfast, lunch, and dinner. Check out these Manali specialities to awaken your taste buds: khatta, sidu, babru, trout, patande, bhey, aktori, and tudkiya bhat.</p>
+        `,
+        userId: 1,
+        published: "Dec 26, 2022 01:44:00 PM"
+    },
+    {
+        id: 5,
+        title: "BEYOND GHATS AND GULLIES – PLACES TO VISIT NEAR VARANASI",
+        postImage: "./images/travel/Aurwathand-Dam.jpg",
+        content: `
+        <p>Rocks and ravines, canyons and cliffs, waterfalls and valleys, forts and stupas, pre-historic art, and artisans – there are so many tourist places to visit near Varanasi beyond temples and rivers, ghats, and gullies. There are rugged terrains that hold many secrets. Rocks that tell a story through art. Sacred stupas and silent sculptures add to the hallowed land. Formidable forts, lost ruins, and ancient monasteries create a tableau of stories. I have been to Varanasi quite a few times but I was fascinated by the landscapes around these destinations. For a moment I wondered if I am still in Uttar Pradesh or have wandered into Madhya Pradesh. If you are looking for heritage and offbeat places around Varanasi, then here are five fascinating places to visit near Varanasi that you can explore.</p>
+        <h3>Rocks and ravines, canyons and cliffs, waterfalls and valleys, forts and stupas, pre-historic art, and artisans – there are so many tourist places to visit near Varanasi beyond temples and rivers, ghats, and gullies. There are rugged terrains that hold many secrets. Rocks that tell a story through art. Sacred stupas and silent sculptures add to the hallowed land. Formidable forts, lost ruins, and ancient monasteries create a tableau of stories. I have been to Varanasi quite a few times but I was fascinated by the landscapes around these destinations. For a moment I wondered if I am still in Uttar Pradesh or have wandered into Madhya Pradesh. If you are looking for heritage and offbeat places around Varanasi, then here are five fascinating places to visit near Varanasi that you can explore.</h3>
+        <p>The mystical and historic Chunar Fort, located barely 30 km away from Varanasi and equidistant from Mirzapur tells so many stories.  Overlooking the River Ganga, the settlements around the fort date back to 56 BC to the reign of Raja Vikramaditya. According to a legend, the king visited the forests in this region looking for his brother, Bharatthari, who was living here as a recluse and a hermit. The king built a small house here for him and even today, a black stone, worshipped by the locals is believed to be possessed by the spirit of the saint who is invisible and lives around the fort.</p>
+        <p>Historic records point to the 11th century when the fort was actually built but it was rebuilt later by the Mughals and the British. Battles between Mughal king Humayan and the Pathan, Sher Shah Suri, or Sher Khan have been documented here. Later the British took over the fortress and the inhuman dungeons beneath the barracks were used as prisons. Even today the ghosts of the past and the eerie stories lend it a touch of the mystical and the supernatural.</p>
+        <p>Mystically however Chunar Fort is filled with legends and is the land of the Chandrakanta novels and is called Chandrakanta Chunargarh.  It is also believed that Bhagwan Vishnu or Bawaan Bhagwan, in the “avtaar” of Vamana set foot on this terrain, and hence it is also called Charanadri. When Bhagwan Vishnu asked Maharaja Bali for three feet of land, he readily agreed. Bhagwan placed his foot on the universe, here mythically and symbolically representing the region around Chunar Fort. One of the priests in the small temple in the fort complex said the land around the fort is blessed and we are on hallowed land. Even today it is believed that God lives in the fort and goes to Varanasi for three hours when the fortress is believed to be vulnerable. As a storyteller I love listening to mystical tales and Chunar is literally my kind of destination. It surprised me at every step with the many tableau of stories and layers of history that I peeled as I explored the fortress.</p>
+
+        `,
+        userId: 1,
+        published: "Dec 26, 2022 01:44:00 PM"
+    },
+    {
+        id: 6,
+        title: "PLACES TO SEE IN TANAKPUR IN UTTARAKHAND",
+        postImage: "./images/travel/Tanakpur-Sharda-Ghat.jpg",
+        content: `
+        <p>Located on the foothills of the Himalayas and on the banks of the Sharda River and surrounded by dense forests is the charming town of Tanakpur in Uttarakhand. Rugged and raw with pristine views, Tanakpur is often referred to as the ” Gateway to the Kumaon Himalayas. ”  The town is also adjacent to the Nepal border as a bridge across the Sharda River separates India from Nepal. However, Tanakpur is also a destination for pilgrims and devotees as the Devi Purnagiri Temple is located 20 kms from the town and you have to do a short trek of 3 km uphill to reach the temple which is one of the 108 Shakti Peethas. There are several tourist places near Tanakpur from lakes, forests, and temples, and here are some of the places to see in Tanakpur.</p>
+        <h3>Maa Purnagiri Temple</h3>
+        <p>The divine mythological legend of Mahadev Shiva and Ma Parvati as the deities Shiva and Sati is retold here. It was believed that Lord Shiva as a Yogi had married Sati against the wishes of her father and king, Dakha Prajapati and he performed a Vrihaspati Yagna without inviting them. When Sati went there alone, she was humiliated as her father insulted Lord Shiva and she immolated herself in the sacrificial fire. An angry Lord Shiva in grief carried Sati’s body in his arms and performed the dance of destruction. It is believed that parts of her body fell at different regions and they became known as Shakti Peethams. At Purnagiri it is believed that her navel or “naabi” had fallen and the temple was later built here. One of the oldest temples, it is always thronged by devotees, especially around spring in March- April, during Chaitra Navaratri.</p>
+        <p>Another popular temple, located on the banks of the Sharda River is the Boom Temple, also called Adhya Shakti Peeth. It is believed to be under the auspices of the spiritual and mystical Guru Maa and the shrines here are dedicated to the Hindu pantheon of Goddesses who are forms of Shakti or Ma Parvati.</p>
+        <h3>Sharda Ghat</h3>
+        <p>One of the most pristine ghats, the Sharda Ghat is also called Ma Purnagiri Ghat. The turquoise waters of the river Sharda surrounded by the mountains look straight out of a picture postcard. But this is also one of the holiest of all ghats as most pilgrims and devotees have their ablutions here before visiting the temple.</p>
+        
         `,
         userId: 1,
         published: "Dec 26, 2022 01:44:00 PM"

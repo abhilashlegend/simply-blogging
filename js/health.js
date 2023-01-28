@@ -1,5 +1,6 @@
 const healthBlogData = [
     {
+        id: 1,
         title: "Get Your Vitamin P: Why Pleasure Matters When It Comes to What You Eat",
         postImage: "./images/health/pexels-nadin-sh-12918199.jpg",
         content: `
@@ -17,6 +18,7 @@ const healthBlogData = [
         published: "Jan 03, 2023 02:41:00 PM"
     },
     {
+        id: 2,
         title: "15 Staple Foods to Make Healthy Eating Easy All Week Long",
         postImage: "./images/health/pexels-viktoria-slowikowska-5677621.jpg",
         content: `
@@ -40,6 +42,7 @@ const healthBlogData = [
         published: "Dev 22, 2022 03:13:00 PM"
     },
     {
+        id: 3,
         title: "The Definitive Guide to Healthy Eating in Real Life",
         postImage: "./images/health/pexels-đặng-thanh-tú-5659198.jpg",
         content: `
@@ -55,6 +58,7 @@ const healthBlogData = [
         published: "Jan 02, 2023 01:14:00 PM"
     },
     {
+        id: 4,
         title: "Plant-based Protein: The Best, the Worst, and Everything In Between",
         postImage: "./images/health/pexels-marta-branco-1295572.jpg",
         content: `
@@ -65,6 +69,43 @@ const healthBlogData = [
        <p>Here’s an overview of the latest science behind plant-based proteins, when to use them, and why they make a difference to the environment and your health.</p>
        <h3>The science behind plant-based protein</h3>
        <p>When comparing plant-based protein to animal protein, there are plenty of factors to consider, from taste to cost. But if you’re turning to plants for a health purpose, it’s helpful to look at the science behind their benefits.</p>
+        `,
+        userId: 1,
+        published: "Jan 23, 2023 01:44:00 PM"
+    },
+    {
+        id: 5,
+        title: "What Types of Music Help You Fall Asleep The Easiest",
+        postImage: "./images/health/pexels-ketut-subiyanto-4473864.jpg",
+        content: `
+        <p>You might be hard-pressed to find any commonalities between the children’s lullaby “Twinkle Twinkle Little Star” and the k-pop hit “Dynamite” by BTS.</p>
+        <p>It turns out both songs are commonly used to help people fall asleep.</p>
+        <p>Surprised?</p>
+        <p>So were the researchers, whose findings were published today in the scientific journal PLOS ONE.</p>
+        <h3>Using music to fall asleep is common</h3>
+        <p>The researchers cited previous studies indicating that close to half of people interviewed use music to help them fall asleep.</p>
+        <p>However, despite how common the practice is, there’s been little detailed research on what types of music people are actually listening to for this purpose.</p>
+        <p>In this study, researchers reviewed data from the audio streaming service Spotify to determine what types of music people listen to to fall asleep.</p>
+        <p>While the data was anonymized, researchers noted that Spotify is used in 92 countries and that people of all ages use music streaming services. They believe this lends their study the most global look into sleep music yet.</p>
+        `,
+        userId: 1,
+        published: "Jan 23, 2023 01:44:00 PM"
+    },
+    {
+        id: 6,
+        title: "Is High Blood Pressure Genetic?",
+        postImage: "./images/health/pexels-pavel-danilyuk-7108344.jpg",
+        content: `
+        <p>High blood pressure means the force of blood flowing through your arteries is greater than it should be. If not controlled, it could damage your blood vessels and cause other health problems.</p>
+        <p>High blood pressure (hypertension) tends to be a condition we associate with being too sedentary or getting older. But high blood pressure can also be a genetic condition, affecting people who are otherwise fit and healthy.</p>
+        <p>A parent with high blood pressure can pass along a gene to a child, raising that person’s risk of developing hypertension one day. Familial hypertension may also result from a family lifestyle that includes high blood pressure risk factors, such as smoking or an unhealthy diet.</p>
+        <h3>What is hypertension?</h3>
+        <p>Blood pressure is the force of circulating blood against the inner wall of your arteries. It’s measured in millimeters of mercury (mm Hg) and is presented as two numbers:</p>
+        <ul>
+            <li>The first (top) number is the systolic pressure, which is the pressure inside the artery walls during a heartbeat.</li>
+            <li>The second (bottom) number is the diastolic pressure, which is the pressure when the heart is at rest.</li>
+        </ul>
+        <p>According to the American Heart AssociationTrusted Source, healthy blood pressure is a systolic pressure of less than 120 mm Hg and a diastolic pressure of less than 80 mm Hg. This is a blood pressure of less than 120/80 mm Hg.</p>
         `,
         userId: 1,
         published: "Jan 23, 2023 01:44:00 PM"

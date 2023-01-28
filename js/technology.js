@@ -1,5 +1,6 @@
 const travelBlogData = [
     {
+        id: 1,
         title: "OnePlus 11R and OnePlus Pad to launch on February 7th",
         postImage: "./images/technology/fea-27-12-1280-3c72b0ea3f.webp",
         content: `
@@ -17,6 +18,7 @@ const travelBlogData = [
         published: "Jan 03, 2023 02:41:00 PM"
     },
     {
+        id: 2,
         title: "Samsung is set to unveil next-gen camera technology & innovations",
         postImage: "./images/technology/featured-5-941b421aaf.webp",
         content: `
@@ -30,6 +32,7 @@ const travelBlogData = [
         published: "Jan 24, 2022 03:13:00 PM"
     },
     {
+        id: 3,
         title: "OptiPlex line-up of business-class desktops",
         postImage: "./images/technology/dell-cover-87c7394e42.webp",
         content: `
@@ -45,6 +48,7 @@ const travelBlogData = [
         published: "Jan 13, 2023 01:14:00 PM"
     },
     {
+        id: 4,
         title: "Apple planning to bring infinite track pad to MacBook, hints patent",
         postImage: "./images/technology/1280-720px-11-3e04f22dbd.webp",
         content: `
@@ -57,6 +61,34 @@ const travelBlogData = [
        <p>Apple has recently filed a patent related to the trackpad design with the US Patent & Trademark Office. This has been found by Patently Apple.</p>
        <p>With this patent, Apple is bringing a whole new addition to its MacBook. This could look similar to the infinite trackpad on the Dell XPS 13 and LG Gram Style which was displayed at CES 2023 recently.</p>
        <p>If this is to be believed, it would mean that the second half of the Macbook could feature a glass body. Additionally, this trackpad could come with many haptic engines which will allow mimicking a physical clickable feel. With this, a lot of functionalities can be introduced that will further enable the usability of the large-sized trackpad.</p>
+        `,
+        userId: 1,
+        published: "Dec 26, 2022 01:44:00 PM"
+    },
+    {
+        id: 5,
+        title: "Renders and specifications of the Samsung Galaxy Book 3 Pro SE have emerged online",
+        postImage: "./images/technology/fea-28-4-1280-a696cfabe7.webp",
+        content: `
+        <p>The Samsung Galaxy Book 3 Pro SE, set to debut alongside the Galaxy S23 series on February 1, is said to feature a 15.6-inch AMOLED display with a resolution of 1920 x 1080. The refresh rate of the display is currently unknown, but it is expected to offer a wide viewing angle. The laptop is also expected to be powered by a 13th-generation Intel Core i5-1340P processor, with a peak clock speed of 4.6GHz, paired with 16GB of LPDDR5 RAM, 256GB of NVMe SSD and Intel Iris Xe graphics, according to a report by MySmartPrice.</p>
+        <h3>SAMSUNG GALAXY BOOK 3 PRO SE SPECIFICATIONS</h3>
+        <p>According to recent reports, the Galaxy Book 3 Pro SE, a part of Samsung's upcoming Galaxy Book 3 series, is expected to feature a 15.6-inch AMOLED display with a resolution of 1920 x 1080 and a wide viewing angle. It is said to be powered by a 13th-generation Intel Core i5-1340P processor with a peak clock speed of 4.6GHz, paired with 16GB of LPDDR5 RAM, 256GB of NVMe SSD, and Intel Iris Xe graphics</p>
+        <p>The device is also said to come with a full-size keyboard, thin bezels around the display, and a silver colour similar to the Galaxy Book 2 Pro. Connectivity options include Thunderbolt 4, HDMI, and a USB Type-C port, and a possible fingerprint sensor for security. However, it is unclear if the device will run on Windows or ChromeOS, and we will have to wait until the official launch on February 1 to confirm.</p>
+        <h3>SAMSUNG GALAXY BOOK 3 PRO SE AVAILABILITY</h3>
+        <p>The upcoming Samsung Galaxy Book 3 Pro SE is already available for pre-order in various countries. Pre-ordering the laptop can help you avail offers and benefits from the brand.</p>
+
+        `,
+        userId: 1,
+        published: "Dec 26, 2022 01:44:00 PM"
+    },
+    {
+        id: 6,
+        title: "Apple’s Reality Pro VR headset sould launch sometime in spring",
+        postImage: "./images/technology/fea-28-3-1280-9615dc2eee.webp",
+        content: `
+        <p>According to Bloomberg's Mark Gurman, Apple's highly-anticipated augmented and virtual reality headset is nearing completion. The company is expected to reveal the device in the spring, ahead of its WWDC conference in June. To indicate that the launch is imminent, Apple has reportedly shared the headset with selected software developers and provided them with a preview of the new xrOS software. Gurman predicts that after the Spring announcement of Reality Pro, the device will be made available for purchase in the fall.</p>
+        <p>Apple's forthcoming AR/VR headset is reportedly nearing completion and is set to be announced in the spring, ahead of the WWDC conference in June. However, the final stages of development for the device will affect the rest of Apple's 2023 product lineup. According to Bloomberg's Mark Gurman, the next versions of iOS and macOS will have fewer major changes than previously planned, as software engineers have been reassigned to work on the xrOS team. </p>
+        <p>Additionally, there are no significant updates planned for Apple's iPad, Apple Watch, and audio lines. Gurman notes that new iPad Pro models with OLED displays are expected to arrive in 2024 and warns that the upcoming Apple Silicon MacPro will be another disappointment with the same design as its 2019 predecessor and no ability to upgrade the computer's RAM on your own.</p>      
         `,
         userId: 1,
         published: "Dec 26, 2022 01:44:00 PM"
