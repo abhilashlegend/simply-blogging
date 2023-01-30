@@ -16,7 +16,11 @@ const authorization = [
     }
 ];
 
-window.localStorage.setItem("users", JSON.stringify(userData));
+
+if(JSON.parse(window.localStorage.getItem("users")).length < 1){
+    window.localStorage.setItem("users", JSON.stringify(userData));
+};
+
 window.localStorage.setItem("auth", JSON.stringify(authorization));
 
 const verifyUserAuthorization = (username, password) => {
