@@ -112,7 +112,9 @@ const healthBlogData = [
     }
 ];
 
-window.localStorage.setItem("healthblog", JSON.stringify(healthBlogData));
+if(JSON.parse(window.localStorage.getItem("healthblog")) ==  null){
+    window.localStorage.setItem("healthblog", JSON.stringify(healthBlogData));
+}
 
 const getHealthBlog = () => finblog = JSON.parse(window.localStorage.getItem("healthblog"));
 

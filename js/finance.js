@@ -99,8 +99,9 @@ const financeBlogData = [
     }
 
 ];
-
-window.localStorage.setItem("finblog", JSON.stringify(financeBlogData));
+if(JSON.parse(window.localStorage.getItem("finblog")) == null){
+    window.localStorage.setItem("finblog", JSON.stringify(financeBlogData));
+}
 
 const getFinanceBlog = () => finblog = JSON.parse(window.localStorage.getItem("finblog"));
 

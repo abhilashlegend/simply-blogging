@@ -1,4 +1,4 @@
-const travelBlogData = [
+const technologyBlogData = [
     {
         id: 1,
         title: "OnePlus 11R and OnePlus Pad to launch on February 7th",
@@ -95,10 +95,12 @@ const travelBlogData = [
     }
 ];
 
-window.localStorage.setItem("travelblog", JSON.stringify(travelBlogData));
+if(JSON.parse(JSON.parse(window.localStorage.getItem("technologyblog")) === null)){
+    window.localStorage.setItem("technologyblog", JSON.stringify(technologyBlogData));
+}
 
-const getTravelBlog = () => travelblog = JSON.parse(window.localStorage.getItem("travelblog"));
+const getTechnologyBlog = () => travelblog = JSON.parse(window.localStorage.getItem("technologyblog"));
 
-const travelData = getTravelBlog();
+const technologyData = getTechnologyBlog();
 
-displayBlog(travelData);
+displayBlog(technologyData);

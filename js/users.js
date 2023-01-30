@@ -17,7 +17,7 @@ const authorization = [
 ];
 
 
-if(JSON.parse(window.localStorage.getItem("users")).length < 1){
+if(JSON.parse(window.localStorage.getItem("users")) === null){
     window.localStorage.setItem("users", JSON.stringify(userData));
 };
 
