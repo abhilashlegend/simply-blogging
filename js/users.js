@@ -1,6 +1,6 @@
 const userData = [
     {
-        userId: 1,
+        id: 1,
         fullname: "Abhilash N",
         username: "admin",
         email: "abhilash@example.com",
@@ -42,24 +42,17 @@ const verifyUserAuthorization = (username, password) => {
 
 const signinBtn = document.getElementById("signin");
 
-signinBtn.addEventListener("click", (e) => {
+signinBtn?.addEventListener("click", (e) => {
     e.preventDefault();
     let formIsValid = true;
 
     const username = document.getElementById("username");
     const password = document.getElementById("password");
-    if(username.value == ""){
-        username.nextElementSibling.style.display = "block";
-        formIsValid = false;
-    }
-    if(password.value == ""){
-        password.nextElementSibling.style.display = "block";
-        formIsValid = false
-    }
+    formIsValid = checkRequiredInput(username);
+    formIsValid = checkRequiredInput(password);
+    
     if(formIsValid){
-        username.nextElementSibling.style.display = "none";
-        password.nextElementSibling.style.display = "none";
-
+       
         const loggedIn = verifyUserAuthorization(username.value, password.value);
 
         let message = '';
@@ -95,3 +88,39 @@ const alertMessage = (type, message) => {
     messageEle.innerHTML = message;
     
 }
+
+
+
+const signUpBtn = document.getElementById("signupBtn");
+signUpBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    let formIsValid = true;
+
+    const fullname = document.getElementById("fullname");
+    const email = document.getElementById("email");
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmpassword");
+
+    formIsValid = checkRequiredInput(fullname);
+    formIsValid = checkRequiredInput(email) && checkEmailInput(email);
+    formIsValid = checkRequiredInput(username);
+    formIsValid = checkRequiredInput(password);
+    formIsValid = checkRequiredInput(confirmPassword) && checkConfirmPassword(password, confirmPassword);
+
+    if(formIsValid){
+        const users = JSON.parse(window.localStorage.getItem("users"));
+        const newid = generateUniqueId(users);
+        newuser = [
+            ...users,
+            {
+            id: newid,
+            fullname: fullname.value,
+            username: username.value,
+            email: email.value,
+            password: password.value
+        }];
+        window.localStorage.setItem("users", JSON.stringify(newuser));
+        alert("Thank you for registration");
+    }
+})

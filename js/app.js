@@ -50,7 +50,7 @@ window.localStorage.setItem("auth", JSON.stringify(clearLoginData));
 
 const logoutBtn = document.getElementById("logoutBtn");
 
-logoutBtn.addEventListener("click", (e) => {
+logoutBtn?.addEventListener("click", (e) => {
   logOut();
   location.replace("/index.html");
 });
@@ -84,3 +84,48 @@ document.getElementById('blogDetailModal').addEventListener('show.bs.modal', (e)
   document.getElementById("modal-image").setAttribute("src", e.relatedTarget.dataset["img"]);
   document.getElementById("modal-content").innerHTML = e.relatedTarget.dataset.content;
 });
+
+/* Form Validation function to check required */
+function checkRequiredInput(ele) {
+  if(ele.value === ""){
+    ele.nextElementSibling.style.display = "block";
+    return false;
+  }
+  ele.nextElementSibling.style.display = "none";
+  return true;
+}
+
+/* Email Validation function */
+function checkEmailInput(ele) {
+  const regEx =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if(!regEx.test(ele.value.trim()) && ele.value !== ""){
+      ele.nextElementSibling.style.display = "block";
+        return false;
+    }
+    ele.nextElementSibling.style.display = "none";
+    return true;
+}
+
+/* Confirm Password validator */
+function checkConfirmPassword(passwordInput, confirmPasswordInput){
+  if(confirmPasswordInput.value !== passwordInput.value){
+    confirmPasswordInput.nextElementSibling.style.display = "block";
+    return false;
+  }
+  confirmPasswordInput.nextElementSibling.style.display = "none";
+  return true;
+}
+
+
+/* Function that generates unique id */
+function generateUniqueId(obj) {
+  let newId = Math.floor(Math.random() * 1000000);
+  let isUnique = obj.every(idObj => idObj.id !== newId);
+  if (isUnique) {
+    return newId;
+  } else {
+    return generateUniqueId(obj);
+  }
+}
+

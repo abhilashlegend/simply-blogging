@@ -47,6 +47,16 @@ main {
     padding-bottom: 3rem!important;
 }
 
+.carousel-inner {
+    max-height: 600px;
+}
+
+@media(max-width: 420px){
+    .carousel-inner {
+        height: 221px;
+    } 
+}
+
 .trend-card {
     display: flex;
 }
@@ -387,3 +397,7 @@ background: #eee;
 }
 
 .card .bg-image { height: 233px; overflow: hidden;}
+
+.quill-editor {
+    height: 300px;
+}
