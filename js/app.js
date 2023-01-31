@@ -65,8 +65,6 @@ logoutBtn?.addEventListener("click", (e) => {
   auth.forEach(data => {
     
     if(data.loggedIn == true){
-      console.log(true);
-      
       accMenu.style.display = "block";
       signinMenu.style.display = "none";
       signupMenu.style.display = "none";
@@ -74,7 +72,6 @@ logoutBtn?.addEventListener("click", (e) => {
       accMenu.style.display = "none";
       signinMenu.style.display = "block";
       signupMenu.style.display = "block";
-      console.log(false);
     }
   })
 })();
@@ -147,7 +144,7 @@ function formatDate(date) {
 /* Function that loads posts in Latest Posts section in home page */
 function LoadRecentNews() {
   
-  const url = `https://api.newscatcherapi.com/v2/search?q=latest&countries=IN&page_size=10`;
+  const url = `https://api.newscatcherapi.com/v2/search?q=*&countries=IN&page_size=10`;
   
   const xhttp = new XMLHttpRequest();
 xhttp.onload = () => {
@@ -229,7 +226,6 @@ xhttp.onload = () => {
   if (xhttp.status === 200) {
     const newsData = JSON.parse(xhttp.responseText);
     const articles = newsData.articles;
-    console.log(articles);
     let content = '';
     const trendingPostBlock = document.querySelector(".trending-posts");
     for(let i = 1; i <= 6; i++){
