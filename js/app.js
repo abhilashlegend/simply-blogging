@@ -79,7 +79,7 @@ logoutBtn?.addEventListener("click", (e) => {
   })
 })();
 
-document.getElementById('blogDetailModal').addEventListener('show.bs.modal', (e) => {
+document.getElementById('blogDetailModal')?.addEventListener('show.bs.modal', (e) => {
   document.getElementById("modal-title").innerHTML = e.relatedTarget.dataset.title;
   document.getElementById("modal-image").setAttribute("src", e.relatedTarget.dataset["img"]);
   document.getElementById("modal-content").innerHTML = e.relatedTarget.dataset.content;
@@ -129,3 +129,129 @@ function generateUniqueId(obj) {
   }
 }
 
+/* Function get formated date - Month Day, Year */
+function formatDate(date) {
+  var d = new Date(date),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
+
+  if (month.length < 2) 
+    month = '0' + month;
+  if (day.length < 2) 
+    day = '0' + day;
+  const dt = new Date(year + '-' + month + '-' + day).toLocaleString('en-us',{month:'short', day:'numeric', year:'numeric'});
+  return dt;
+}
+
+/* Function that loads posts in Latest Posts section in home page */
+function LoadRecentNews() {
+  
+  const url = `https://newsapi.org/v2/everything?q='latest'&from=2022-12-31&sortBy=publishedAt&apiKey=b1f90acb300c443fb6847c7dff5a8b4a`;
+  
+  const xhttp = new XMLHttpRequest();
+xhttp.onload = () => {
+  
+  if (xhttp.status === 200) {
+    const newsData = JSON.parse(xhttp.responseText);
+    const articles = newsData.articles;
+    let content = '';
+    const newsPostBlock = document.querySelector(".newsPosts");
+    for(let i = 0; i < 4; i++){
+      if(i == 0){
+        const fullColumnElement = document.querySelector(".fullColumnPost");
+        let firstPost = `
+        <a class="entry-inner" target="_blank" href="${articles[i].url}" title="${articles[i].title}">
+        <span class="entry-image-wrap before-mask is-image">
+          <span class="entry-image pbt-lazy" data-src="${articles[i].urlToImage}" style="background-image:url('${articles[i].urlToImage}')"></span>
+        </span>
+        <div class="entry-header entry-info">
+          <span class="entry-category">${articles[i].source.name}</span>
+          <h2 class="entry-title">${articles[i].title}</h2>
+          <div class="entry-meta">
+            <span class="entry-author mi">
+              <span class="sp">by</span>
+              <span class="author-name">${articles[i].author}</span>
+            </span>
+            <span class="entry-time mi">
+              <span class="sp">-</span>
+              <time class="published" datetime="2021-07-31T12:22:00.002-07:00">${formatDate(articles[i].publishedAt)}</time>
+            </span>
+          </div>
+        </div>
+      </a>
+    </div> 
+        `;
+        fullColumnElement.innerHTML = firstPost;
+      } else{
+        content += `
+      <div class="block1-item item-${i}">
+                        <a title="${articles[i].title}" target="_blank" class="entry-image-wrap sz-1 is-image" href="${articles[i].url}">
+                          <span class="entry-image pbt-lazy" style="background-image:url('${articles[i].urlToImage}')">
+                          </span>
+                        </a>
+                        <div class="entry-header">
+                          <h2 class="entry-title">
+                            <a href="${articles[i].url}" title="${articles[i].title}">${articles[i].title}</a>
+                          </h2>
+                          <div class="entry-meta">
+                            <span class="entry-time mi"><time class="published">${formatDate(articles[i].publishedAt)}</time>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+      `;
+      }      
+    }
+    newsPostBlock.innerHTML = content;
+  } else {
+    console.log("There was a problem with the request.");
+  }
+
+}
+xhttp.open("GET", url);
+xhttp.send();
+}
+LoadRecentNews();
+
+/* Function that loads  Popular posts in Trending Posts section in home page */
+function LoadTrendingNews() {
+  
+  const url = `https://newsapi.org/v2/everything?q='popular'&from=2022-12-31&sortBy=publishedAt&apiKey=b1f90acb300c443fb6847c7dff5a8b4a`;
+  
+  const xhttp = new XMLHttpRequest();
+xhttp.onload = () => {
+  
+  if (xhttp.status === 200) {
+    const newsData = JSON.parse(xhttp.responseText);
+    const articles = newsData.articles;
+    let content = '';
+    const trendingPostBlock = document.querySelector(".trending-posts");
+    for(let i = 1; i <= 6; i++){
+      
+        content += `
+        <div class="col-sm-4 mb-3">
+        <div class="trend-card">
+            <div class="trend-no">0${i}</div>
+            <div class="trend-cont">
+              <div class="trend-author">
+                <span class="authorpic"><img src="./images/profile.png" alt="author" class="img-fluid" /></span>
+                <span class="trend-authname">Abhilash N</span>                        
+              </div>
+              <h3 class="trend-title"><a target="_blank" href="${articles[i].url}" title="${articles[i].title}">${articles[i].title}</a></h3>
+              <div class="trend-date">${formatDate(articles[i].publishedAt)}</div>
+            </div>
+        </div>
+      </div>
+      `;
+    }
+    trendingPostBlock.innerHTML = content;
+  } else {
+    console.log("There was a problem with the request.");
+  }
+
+}
+xhttp.open("GET", url);
+xhttp.send();
+}
+LoadTrendingNews();
