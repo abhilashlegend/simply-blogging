@@ -147,7 +147,7 @@ function formatDate(date) {
 /* Function that loads posts in Latest Posts section in home page */
 function LoadRecentNews() {
   
-  const url = `https://newsapi.org/v2/everything?q='latest'&from=2022-12-31&sortBy=publishedAt&apiKey=b1f90acb300c443fb6847c7dff5a8b4a`;
+  const url = `https://api.newscatcherapi.com/v2/search?q=latest&countries=IN&page_size=10`;
   
   const xhttp = new XMLHttpRequest();
 xhttp.onload = () => {
@@ -161,12 +161,12 @@ xhttp.onload = () => {
       if(i == 0){
         const fullColumnElement = document.querySelector(".fullColumnPost");
         let firstPost = `
-        <a class="entry-inner" target="_blank" href="${articles[i].url}" title="${articles[i].title}">
+        <a class="entry-inner" target="_blank" href="${articles[i].link}" title="${articles[i].title}">
         <span class="entry-image-wrap before-mask is-image">
-          <span class="entry-image pbt-lazy" data-src="${articles[i].urlToImage}" style="background-image:url('${articles[i].urlToImage}')"></span>
+          <span class="entry-image pbt-lazy"  style="background-image:url('${articles[i].media}')"></span>
         </span>
         <div class="entry-header entry-info">
-          <span class="entry-category">${articles[i].source.name}</span>
+          <span class="entry-category">${articles[i].topic}</span>
           <h2 class="entry-title">${articles[i].title}</h2>
           <div class="entry-meta">
             <span class="entry-author mi">
@@ -175,7 +175,7 @@ xhttp.onload = () => {
             </span>
             <span class="entry-time mi">
               <span class="sp">-</span>
-              <time class="published" datetime="2021-07-31T12:22:00.002-07:00">${formatDate(articles[i].publishedAt)}</time>
+              <time class="published" datetime="2021-07-31T12:22:00.002-07:00">${formatDate(articles[i].published_date)}</time>
             </span>
           </div>
         </div>
@@ -186,16 +186,16 @@ xhttp.onload = () => {
       } else{
         content += `
       <div class="block1-item item-${i}">
-                        <a title="${articles[i].title}" target="_blank" class="entry-image-wrap sz-1 is-image" href="${articles[i].url}">
-                          <span class="entry-image pbt-lazy" style="background-image:url('${articles[i].urlToImage}')">
+                        <a title="${articles[i].title}" target="_blank" class="entry-image-wrap sz-1 is-image" href="${articles[i].link}">
+                          <span class="entry-image pbt-lazy" style="background-image:url('${articles[i].media}')">
                           </span>
                         </a>
                         <div class="entry-header">
                           <h2 class="entry-title">
-                            <a href="${articles[i].url}" title="${articles[i].title}">${articles[i].title}</a>
+                            <a href="${articles[i].link}" title="${articles[i].title}">${articles[i].title}</a>
                           </h2>
                           <div class="entry-meta">
-                            <span class="entry-time mi"><time class="published">${formatDate(articles[i].publishedAt)}</time>
+                            <span class="entry-time mi"><time class="published">${formatDate(articles[i].published_date)}</time>
                             </span>
                           </div>
                         </div>
@@ -210,14 +210,18 @@ xhttp.onload = () => {
 
 }
 xhttp.open("GET", url);
+xhttp.setRequestHeader("x-api-key", "gB07CQgAPyQUocD0ZgZDggraYo17qm878MZgFRDiJQ0");
 xhttp.send();
 }
-LoadRecentNews();
+//LoadRecentNews();
+setTimeout(LoadRecentNews, 1000); // Used settimeout because of only 1 call per sec to api 
 
 /* Function that loads  Popular posts in Trending Posts section in home page */
 function LoadTrendingNews() {
+
   
-  const url = `https://newsapi.org/v2/everything?q='popular'&from=2022-12-31&sortBy=publishedAt&apiKey=b1f90acb300c443fb6847c7dff5a8b4a`;
+  
+  const url = `https://api.newscatcherapi.com/v2/search?q=trending&&countries=IN&page_size=10`;
   
   const xhttp = new XMLHttpRequest();
 xhttp.onload = () => {
@@ -225,10 +229,11 @@ xhttp.onload = () => {
   if (xhttp.status === 200) {
     const newsData = JSON.parse(xhttp.responseText);
     const articles = newsData.articles;
+    console.log(articles);
     let content = '';
     const trendingPostBlock = document.querySelector(".trending-posts");
     for(let i = 1; i <= 6; i++){
-      
+     
         content += `
         <div class="col-sm-4 mb-3">
         <div class="trend-card">
@@ -238,8 +243,8 @@ xhttp.onload = () => {
                 <span class="authorpic"><img src="./images/profile.png" alt="author" class="img-fluid" /></span>
                 <span class="trend-authname">Abhilash N</span>                        
               </div>
-              <h3 class="trend-title"><a target="_blank" href="${articles[i].url}" title="${articles[i].title}">${articles[i].title}</a></h3>
-              <div class="trend-date">${formatDate(articles[i].publishedAt)}</div>
+              <h3 class="trend-title"><a target="_blank" href="${articles[i].link}" title="${articles[i].title}">${articles[i].title}</a></h3>
+              <div class="trend-date">${formatDate(articles[i].published_date)}</div>
             </div>
         </div>
       </div>
@@ -252,6 +257,7 @@ xhttp.onload = () => {
 
 }
 xhttp.open("GET", url);
+xhttp.setRequestHeader("x-api-key", "gB07CQgAPyQUocD0ZgZDggraYo17qm878MZgFRDiJQ0");
 xhttp.send();
 }
 LoadTrendingNews();
