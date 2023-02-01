@@ -202,6 +202,61 @@ xhttp.onload = () => {
     }
     newsPostBlock.innerHTML = content;
   } else {
+    // Get temporary data incase API not working
+    fetch('./js/news.json')
+    .then((response) => response.json())
+    .then((json) => {
+      const articles = json;
+      let content = '';
+      const newsPostBlock = document.querySelector(".newsPosts");
+      for(let i = 0; i < 4; i++){
+        if(i == 0){
+          const fullColumnElement = document.querySelector(".fullColumnPost");
+          let firstPost = `
+          <a class="entry-inner" target="_blank" href="${articles[i].link}" title="${articles[i].title}">
+          <span class="entry-image-wrap before-mask is-image">
+            <span class="entry-image pbt-lazy"  style="background-image:url('${articles[i].media}')"></span>
+          </span>
+          <div class="entry-header entry-info">
+            <span class="entry-category">${articles[i].topic}</span>
+            <h2 class="entry-title">${articles[i].title}</h2>
+            <div class="entry-meta">
+              <span class="entry-author mi">
+                <span class="sp">by</span>
+                <span class="author-name">${articles[i].author}</span>
+              </span>
+              <span class="entry-time mi">
+                <span class="sp">-</span>
+                <time class="published" datetime="2021-07-31T12:22:00.002-07:00">${formatDate(articles[i].published_date)}</time>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div> 
+          `;
+          fullColumnElement.innerHTML = firstPost;
+        } else{
+          content += `
+        <div class="block1-item item-${i}">
+                          <a title="${articles[i].title}" target="_blank" class="entry-image-wrap sz-1 is-image" href="${articles[i].link}">
+                            <span class="entry-image pbt-lazy" style="background-image:url('${articles[i].media}')">
+                            </span>
+                          </a>
+                          <div class="entry-header">
+                            <h2 class="entry-title">
+                              <a href="${articles[i].link}" title="${articles[i].title}">${articles[i].title}</a>
+                            </h2>
+                            <div class="entry-meta">
+                              <span class="entry-time mi"><time class="published">${formatDate(articles[i].published_date)}</time>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+        `;
+        }      
+      }
+      newsPostBlock.innerHTML = content;
+    });
     console.log("There was a problem with the request.");
   }
 
@@ -248,7 +303,36 @@ xhttp.onload = () => {
     }
     trendingPostBlock.innerHTML = content;
   } else {
+    // Get Temporary data to show incase api not working
+    fetch('./js/news.json')
+    .then((response) => response.json())
+    .then((json) => {
+   
+    const articles = json;
+    let content = '';
+    const trendingPostBlock = document.querySelector(".trending-posts");
+    for(let i = 1; i <= 6; i++){
+     
+        content += `
+        <div class="col-sm-4 mb-3">
+        <div class="trend-card">
+            <div class="trend-no">0${i}</div>
+            <div class="trend-cont">
+              <div class="trend-author">
+                <span class="authorpic"><img src="./images/profile.png" alt="author" class="img-fluid" /></span>
+                <span class="trend-authname">Abhilash N</span>                        
+              </div>
+              <h3 class="trend-title"><a target="_blank" href="${articles[i].link}" title="${articles[i].title}">${articles[i].title}</a></h3>
+              <div class="trend-date">${formatDate(articles[i].published_date)}</div>
+            </div>
+        </div>
+      </div>
+      `;
+    }
+    trendingPostBlock.innerHTML = content;
+    });
     console.log("There was a problem with the request.");
+
   }
 
 }
@@ -257,3 +341,11 @@ xhttp.setRequestHeader("x-api-key", "gB07CQgAPyQUocD0ZgZDggraYo17qm878MZgFRDiJQ0
 xhttp.send();
 }
 LoadTrendingNews();
+
+
+/* NewsLetter Subscribe function */
+subscribeBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  alert("Thank you for subscribing");
+})
+
