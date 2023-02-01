@@ -120,4 +120,6 @@ const getHealthBlog = () => finblog = JSON.parse(window.localStorage.getItem("he
 
 const healthData = getHealthBlog();
 
-displayBlog(healthData);
+if(window.location.pathname == "/health.html"){
+    displayBlog(healthData);
+}

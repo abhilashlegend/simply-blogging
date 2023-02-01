@@ -11,6 +11,7 @@ const userData = [
 const authorization = [
     {
         loggedIn: false,
+        userId: null,
         username: "",
         fullname: ""
     }
@@ -32,6 +33,7 @@ const verifyUserAuthorization = (username, password) => {
            
             auth.forEach(data => {
                 data.loggedIn = true;
+                data.c = user.id;
                 data.username = user.username;
                 data.fullname = user.fullname;
             })

@@ -107,4 +107,6 @@ const getFinanceBlog = () => finblog = JSON.parse(window.localStorage.getItem("f
 
 const finBlogData = getFinanceBlog();
 
-displayBlog(finBlogData);
+if(window.location.pathname == "/finance.html"){
+    displayBlog(finBlogData);
+}

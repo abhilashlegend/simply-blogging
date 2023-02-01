@@ -113,10 +113,16 @@ const automobileBlogData = [
     
 ];
 
-window.localStorage.setItem("autoblog", JSON.stringify(automobileBlogData));
+if(JSON.parse(window.localStorage.getItem("autoblog")) === null){
+    window.localStorage.setItem("autoblog", JSON.stringify(automobileBlogData));
+}
 
 const getAutoBlog = () => autoblog = JSON.parse(window.localStorage.getItem("autoblog"));
 
 const autoBlogData = getAutoBlog();
+console.log(autoBlogData);
+if(window.location.pathname == "/automobile.html"){
+    displayBlog(autoBlogData);
+};
 
-displayBlog(autoBlogData);
+

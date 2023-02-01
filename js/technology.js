@@ -95,7 +95,7 @@ const technologyBlogData = [
     }
 ];
 
-if(JSON.parse(JSON.parse(window.localStorage.getItem("technologyblog")) === null)){
+if(JSON.parse(window.localStorage.getItem("technologyblog")) === null){
     window.localStorage.setItem("technologyblog", JSON.stringify(technologyBlogData));
 }
 
@@ -103,4 +103,6 @@ const getTechnologyBlog = () => travelblog = JSON.parse(window.localStorage.getI
 
 const technologyData = getTechnologyBlog();
 
-displayBlog(technologyData);
+if(window.location.pathname == "/technology.html"){
+    displayBlog(technologyData);
+}

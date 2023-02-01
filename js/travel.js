@@ -100,7 +100,7 @@ const travelBlogData = [
     }
 ];
 
-if(JSON.parse(JSON.parse(window.localStorage.getItem("technologyblog")) === null)){
+if(JSON.parse(window.localStorage.getItem("travelblog")) === null){
     window.localStorage.setItem("travelblog", JSON.stringify(travelBlogData));
 }
 
@@ -108,4 +108,6 @@ const getTravelBlog = () => travelblog = JSON.parse(window.localStorage.getItem(
 
 const travelData = getTravelBlog();
 
+if(window.location.pathname == "/travel.html"){
 displayBlog(travelData);
+}

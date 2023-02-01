@@ -92,6 +92,26 @@ function checkRequiredInput(ele) {
   return true;
 }
 
+/* Check required input for Select element */
+
+function checkRequiredSelectInput(ele) {
+  if(ele.value === "0"){
+    ele.nextElementSibling.style.display = "block";
+    return false;
+  }
+  ele.nextElementSibling.style.display = "none";
+  return true;
+}
+
+function checkRequiredQuilInput(ele) {
+  if(ele.innerHTML == "<p><br></p>"){
+    ele.parentElement.nextElementSibling.style.display = "block";
+    return false;
+  }
+  ele.parentElement.nextElementSibling.style.display = "none";
+  return true;
+}
+
 /* Email Validation function */
 function checkEmailInput(ele) {
   const regEx =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -140,6 +160,13 @@ function formatDate(date) {
   const dt = new Date(year + '-' + month + '-' + day).toLocaleString('en-us',{month:'short', day:'numeric', year:'numeric'});
   return dt;
 }
+
+/* Function that returns current date format in Month Day, Year HH:MM:SS AM/PM */
+function getCurrentDateTime() {
+  const curDate = new Date().toLocaleString('en-us',{month:'short', day:'numeric', year:'numeric', hour:'2-digit', minute: '2-digit', second: '2-digit'});
+  return curDate;
+}
+
 
 /* Function that loads posts in Latest Posts section in home page */
 function LoadRecentNews() {
@@ -344,7 +371,8 @@ LoadTrendingNews();
 
 
 /* NewsLetter Subscribe function */
-subscribeBtn.addEventListener("click", (e) => {
+const subscribeBtn = document.getElementById("subscribeBtn");
+subscribeBtn?.addEventListener("click", (e) => {
   e.preventDefault();
   alert("Thank you for subscribing");
 })
