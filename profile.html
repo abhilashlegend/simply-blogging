@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>Simply Blogging - Profile</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-simply-blog fixed-top">
+        <div class="container px-5">
+          <a class="navbar-brand text-primary" href="index.html"><img src="./images/logo.png" alt="Logo, link to home page" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-lg-5">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="automobile.html">Automobile</a></li>
+                  <li><a class="dropdown-item" href="#">Finance</a></li>
+                  <li><a class="dropdown-item" href="health.html">Health</a></li>
+                  <li><a class="dropdown-item" href="travel.html">Travel</a></li>
+                  <li><a class="dropdown-item" href="technology.html">Technology</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown account-menu" id="account-menu">
+                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                  <li><a class="dropdown-item active" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="add-blog.html">Add Blog</a></li>
+                  <li><button class="dropdown-item" href="#" id="logoutBtn">Logout</button></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item" id="signin-menu">
+                <a class="nav-link" href="signin.html">Sign in</a>
+              </li>
+              <li class="nav-item" id="signup-menu">
+                <a class="nav-link" href="signup.html">Sign up</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+        
+      <main>
+        
+
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-lg-6 col-md-6 col-sm-12 offset-lg-2 offset-md-2 offset-sm">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="fullname">Fullname</label>
+                            <input type="text" name="fullname" id="fullname" readonly class="form-control" />
+                            <div class="invalid-feedback">
+                                Please enter fullname
+                            </div>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" name="username" id="username" readonly class="form-control"  />
+                            
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="text" name="email" id="email" readonly class="form-control" />
+                            
+                        </div>
+                    </form>
+                </div>
+            </div> <!-- End of row -->
+        </div> <!-- End of container -->        
+        
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="copyright col-12 text-center">
+            © Copyright SimplyBlog. All Rights Reserved Designed by Abhilash N
+          </div>
+        </div>
+      </footer>
+
+      <script src="./js/jquery.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/app.js" defer></script>
+      <script src="./js/profile.js" defer></script>
+      
+      
+</body>
+</html>

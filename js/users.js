@@ -33,7 +33,7 @@ const verifyUserAuthorization = (username, password) => {
            
             auth.forEach(data => {
                 data.loggedIn = true;
-                data.c = user.id;
+                data.userId = user.id;
                 data.username = user.username;
                 data.fullname = user.fullname;
             })

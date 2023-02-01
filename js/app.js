@@ -375,5 +375,24 @@ const subscribeBtn = document.getElementById("subscribeBtn");
 subscribeBtn?.addEventListener("click", (e) => {
   e.preventDefault();
   alert("Thank you for subscribing");
-})
+});
+
+function getProfile() {
+  const user = JSON.parse(window.localStorage.getItem("auth"));
+  const userId = user[0].userId;
+  console.log(userId);
+  const users = JSON.parse(window.localStorage.getItem("users"));
+  const userDetail = users.map(user => {
+    if(user.id === userId){
+      return {
+        fullname: user.fullname,
+        username: user.username,
+        email: user.email
+      }
+    } else {
+      return {}
+    }
+  })
+  return userDetail;
+}
 
