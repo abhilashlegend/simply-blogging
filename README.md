@@ -75,6 +75,9 @@ Simply Blogging is a static blogging website template that can give you the feel
 
 ## Home Page
 
+![image](https://user-images.githubusercontent.com/24253084/216339057-5429bb15-9f62-43cf-9704-785ce4d03577.png)
+
+
 The home page consists of different section as follows:
 
 The Header Section: The header section is common to all pages and consists of Logo and Navigation.
