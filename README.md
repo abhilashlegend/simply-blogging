@@ -92,3 +92,41 @@ The Above section can be replaced by independent API call or getting data from y
 NewsLetter: This is dummy news letter subscription form that just alerts the user that your subscribed. Newsletter subscription can be made functional further if we use server side technology. 
 
 Footer: The common footer section that displays across the site that mentions site and designed by developer. 
+
+## About Page
+
+The about us page consists of dummy text currently that can replaced with the about site / company details. 
+
+## Automobile Blog Page
+
+The automobile page consists of blog / articles related to automobile. The user can view the full detail of the blog post by clicking on Read button. The articles are displayed currently using javascript objects stored in local storage. Users will be able to add more posts by login and going to Add Blog page. All the data is stored on Browser Local Storage. And hence this shortcoming can be met by using server side technology.
+
+Similarly I have designed different pages for different categories as follows:
+
+## Finance Blog Page
+
+## Health Blog Page
+
+## Travel Blog Page
+
+## Technology Blog Page
+
+## Sign-in or Login Page
+
+The Login page is used to login to the website to make the users add blog post in their machine. Users can Sign-up and Login or use default user with username admin and password 123456789 which is stored in Local Storage of the browser. 
+
+## Sign-up Page
+
+The signup page consists of form with details like fullname, email, username and password. The form contains the validation functions available in the javascript file. Once the validation is ok the user data is stored in Browser Local Storage. 
+Once the user is logged in He/she will be taken to Home page and user would be able to see new drop down menu called Account. 
+
+The account menu consists of Profile, Add Blog and Logout menu. 
+
+## Profile Page
+
+The profile menu consists of user details like fullname, username and email which are readonly. 
+
+## Add Blog Page
+
+The add blog page consists of form to add new blog post based on category. The form consists of required validation. I have used Quil rich text editor to Add HTML text formatting. Caution: Please do not copy directly from webpage and paste instead add the formatting manually to get the content in blog pages. All the posts is added to localstorage that is visible only to client user. 
+
