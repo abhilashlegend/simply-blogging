@@ -10,18 +10,6 @@
 
  ```
 	simply-blogging
-	├── README.md
-	├── about-us.html
-	├── add-blog.html
-	├──automobile.html
-	├──finance.html
-	├──health.html
-	├──index.html
-	├──profile.html
-	├──signin.html
-	├──signup.html
-	├──technology.html
-	├──travel.html
 	├── css
 	│   ├── bootstrap.min.css
 	│   ├── bootstrap.min.css.map
@@ -46,16 +34,19 @@
 	|   ├── technology.js
 	|   ├── travel.js
 	│   └── users.js
-	|
-	└── src
-		├── App.css
-		├── App.js
-		├── App.test.js
-		├── index.css
-		├── index.js
-		├── logo.svg
-		└── serviceWorker.js
-		└── setupTests.js
+	├── README.md
+	├── about-us.html
+	├── add-blog.html
+	├── automobile.html
+	├── finance.html
+	├── health.html
+	├── index.html
+	├── profile.html
+	├── signin.html
+	├── signup.html
+	├── technology.html
+	└──travel.html
+	
 ```
 
 ## Technology Used
